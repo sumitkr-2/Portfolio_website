@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio_Sumit - Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Sumit</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+        <div class="progress-bar" id="progress-bar"></div>
+    </nav>
+
+    <!-- Particle Background -->
+    <div class="particles-container" id="particles"></div>
+
+    <!-- Hero Section -->
+<section class="hero" id="hero">
+  <div class="container hero-wrapper">
+    <!-- Left Side: Text & Buttons -->
+    <div class="hero-left animate__animated animate__fadeInLeft">
+      <h1 class="hero-title">
+        Hey there! 👋<br>
+        I'm <span class="highlight-name typing-text" id="typing-name"></span>
+      </h1>
+      <h2 class="hero-role animate__animated animate__fadeInUp animate__delay-1s">
+        Full Stack Developer & Problem Solver
+      </h2>
+      <p class="hero-description animate__animated animate__fadeInUp animate__delay-2s">
+      I’m Sumit Kumar, a curious and motivated tech enthusiast exploring multiple fields in development and technology. From web development to problem-solving, I enjoy learning and building projects that create real impact. Whether it's frontend, backend, or something entirely new — I'm always ready to take on challenges and grow. Let’s collaborate and build something meaningful together!
+      </p>
+
+      <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-3s">
+        <a href="#projects" class="btn btn--primary">🔍 View Projects</a>
+        <a href="#contact" class="btn btn--outline">📩 Contact Me</a>
+      </div>
+
+      <div class="hero-socials animate__animated animate__fadeIn animate__delay-4s">
+        <a href="https://github.com/sumitkr-2" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/sumit-kumar2004" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:sumit.kumar120664@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <!-- Right Side: Image -->
+    <div class="hero-right animate__animated animate__fadeInRight">
+      <div class="hero-img-container">
+        <img src="./images/sumit.jpg" alt="Sumit Kumar" class="hero-img" draggable="false">
+        <div class="hero-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <!--education section start here -->
+
+ <section class="education" id="education">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+    <div class="education-grid">
+      
+      <!-- College -->
+      <div class="edu-card glass-card">
+        <img src="./images/educations/college.jpg" alt="NIT Delhi" class="edu-img" />
+        <div class="edu-content">
+          <h3 class="edu-title">B.Tech in Computer Science</h3>
+          <h4 class="edu-subtitle">National Institute of Technology, Delhi</h4>
+          <p class="edu-duration">2023 – 2027</p>
+          <p class="edu-description">
+            Building core expertise in Software Development, DSA, and AI through hands-on projects and rigorous coursework.
+          </p>
+          <div class="edu-tags">
+            <!-- <span class="badge">Dean's Merit List</span> -->
+            <span class="badge">Currently Pursuing</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- School -->
+      <div class="edu-card glass-card">
+        <img src="./images/educations/sch.jpeg" alt="RPVV School" class="edu-img" />
+        <div class="edu-content">
+          <h3 class="edu-title">Senior Secondary (PCMB)</h3>
+          <h4 class="edu-subtitle">RPVV, Lajpat Nagar, New Delhi</h4>
+          <!-- <p class="edu-duration">2020 – 2022</p>   -->
+          <p class="edu-description">
+            Built a solid foundation in Physics, Chemistry, Math, and Computer Science. Developed early projects and academic discipline.
+          </p>
+          <div class="edu-tags">
+            <span class="badge">CBSE</span>
+            <span class="badge">Top Performer</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+   
+
+
+    <!-- Experience Section -->
+<section class="experience" id="experience">
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
+    <div class="experience-horizontal">
+
+      <!-- Card 1: SkillCraft -->
+      <div class="flip-card" onclick="handleCardFlip(event)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/educations/intern.jpeg" alt="SkillCraft Logo" class="exp-logo large" />
+            <h3>Software Development Intern</h3>
+            <p>SkillCraft Technology</p>
+          </div>
+          <div class="flip-card-back">
+            <h3>Software Development Intern</h3>
+            <span class="duration">Sep 2024 – Present</span>
+            <p>📍 New Delhi, India</p>
+            <p>
+              Built tools using <strong>Python</strong> & <strong>REST APIs</strong>. Improved automation by 35%. Revamped UI, cutting bugs by 25%.
+            </p>
+            <div class="tech-stack">
+              <span>Python</span><span>REST APIs</span><span>HTML/CSS</span><span>UI</span>
+            </div>
+            <div class="card-buttons">
+              <a href="https://your-link.com" target="_blank" class="visit-btn">📜 Certificate</a>
+              <a href="https://your-link.com" target="_blank" class="visit-btn">📄 LOR</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: UPVISION -->
+      <div class="flip-card" onclick="handleCardFlip(event)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/educations/logo3d.gif" alt="UPVISION Logo" class="exp-logo large" />
+            <h3>Content Head</h3>
+            <p>UPVISION Technical Club</p>
+          </div>
+          <div class="flip-card-back">
+            <h3>Executive Member – Content Head</h3>
+            <span class="duration">2023 – Present</span>
+            <p>📍 NIT Delhi</p>
+            <p>
+              Managed website, led 12 writers, mentored juniors, and increased club reach by 40%.
+            </p>
+            <div class="tech-stack">
+              <span>Leadership</span><span>Teamwork</span><span>Technical Writing</span><span>Docs</span>
+            </div>
+            <div class="card-buttons">
+              <a href="https://your-link.com" target="_blank" class="visit-btn">📜 Certificate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Story Writer -->
+      <div class="flip-card" onclick="handleCardFlip(event)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/sumit.png" alt="Story Logo" class="exp-logo large" />
+            <h3>Story Writer</h3>
+            <p>Medium & Blogs</p>
+          </div>
+          <div class="flip-card-back">
+            <h3>Writer & Blogger</h3>
+            <span class="duration">2022 – Present</span>
+            <p>📍 Online</p>
+            <p>
+              Wrote 10+ blogs and tech stories. simple, impactful content.
+            </p>
+            <div class="tech-stack">
+              <span>Writing</span><span>Tech Blogs</span><span>Creativity</span>
+            </div>
+            <div class="card-buttons">
+              <a href="https://your-link.com" target="_blank" class="visit-btn">📜 Sample Blog</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: Freelance -->
+      <div class="flip-card" onclick="handleCardFlip(event)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/projects/free.jpg" alt="Freelancer Logo" class="exp-logo large" />
+            <h3>Freelance Developer</h3>
+            <p>Remote Projects</p>
+          </div>
+          <div class="flip-card-back">
+            <h3>Freelance Web Developer</h3>
+            <span class="duration">2023 – Present</span>
+            <p>📍 Online</p>
+            <p>
+              Built client websites using React . Prioritized clean UX and responsive design.
+            </p>
+            <div class="tech-stack">
+              <span>React</span><span>Node.js</span><span>Tailwind</span>
+            </div>
+            <div class="card-buttons">
+              <a href="https://your-link.com" target="_blank" class="visit-btn">🌐 Project Link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+   <!--- project section start here -->
+   <section class="projects" id="projects">
+    <div class="container">
+      <h2 class="section-title">My Projects</h2>
+
+      <!-- <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+      </div> -->
+
+      <div class="projects-grid">
+
+          <!-- Project: Algorithm Visualizer -->
+        <div class="project-card glass-card" data-category="frontend">
+          <div class="project-image"> <img src="images/ecommerce.png" alt="Algorithm Visualizer" /></div>
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="https://github.com/your-repo/algo-visualizer" target="_blank" class="project-link">🐙 GitHub</a>
+              <a href="#" target="_blank" class="project-link">🚀 Live Demo</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Algorithm Visualizer</h3>
+            <p class="project-description">Visualizes sorting/searching algorithms step-by-step</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project: Medicine Cum Doctor Suggestor -->
+        <div class="project-card glass-card" data-category="fullstack">
+          <div class="project-image"><img src="images/projects/Medicine.jpg" alt="medic-suggestor" /></div>
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="https://github.com/your-repo/medic-suggestor" target="_blank" class="project-link">🐙 GitHub</a>
+              <a href="https://your-demo-link.com/medic-suggestor" target="_blank" class="project-link">🚀 Live Demo</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Medicine Cum Doctor Suggestor</h3>
+            <p class="project-description">Suggests medicines/doctors based on symptoms and preferences</p>
+            <div class="project-tech">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Project: Ecommerce Data CSV -->
+        <div class="project-card glass-card" data-category="backend">
+          <div class="project-image"><img src="images/projects/ecomers.png" alt="Algorithm Visualizer" /></div>
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="https://github.com/your-repo/ecommerce-csv" target="_blank" class="project-link">🐙 GitHub</a>
+              <a href="https://your-demo-link.com/ecommerce-csv" target="_blank" class="project-link">🚀 Live Demo</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Ecommerce Data CSV</h3>
+            <p class="project-description">Python project to analyze and manipulate e-commerce datasets</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">CSV</span>
+              <span class="tech-tag">Pandas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project: Guess the Number Game -->
+        <div class="project-card glass-card" data-category="frontend">
+          <div class="project-image"><img src="images/projects/guss.png" alt="guess-number" /></div>
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="https://github.com/your-repo/guess-number" target="_blank" class="project-link">🐙 GitHub</a>
+              <a href="https://your-demo-link.com/guess-number" target="_blank" class="project-link">🚀 Live Demo</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Guess the Number Game</h3>
+            <p class="project-description">Java-based CLI game that tests your guessing skills</p>
+            <div class="project-tech">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Console</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project: Sudoku Solver -->
+        <div class="project-card glass-card" data-category="backend">
+          <div class="project-image"><img src="images/projects/suduko.png" alt="sudoku-solver" /></div>
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="https://github.com/your-repo/sudoku-solver" target="_blank" class="project-link">🐙 GitHub</a>
+              <a href="https://your-demo-link.com/sudoku-solver" target="_blank" class="project-link">🚀 Live Demo</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Sudoku Solver</h3>
+            <p class="project-description">Solves Sudoku puzzles using backtracking algorithm</p>
+            <div class="project-tech">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Backtracking</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project: Temperature Converter -->
+        <div class="project-card glass-card" data-category="frontend">
+          <div class="project-image"><img src="images/projects/temp.png" alt="temp-converter" /></div>
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="https://github.com/your-repo/temp-converter" target="_blank" class="project-link">🐙 GitHub</a>
+              <a href="https://your-demo-link.com/temp-converter" target="_blank" class="project-link">🚀 Live Demo</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Temperature Converter</h3>
+            <p class="project-description">Simple unit converter built using Java console</p>
+            <div class="project-tech">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">CLI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project: Turbo Compress Image -->
+        <div class="project-card glass-card" data-category="fullstack">
+          <div class="project-image"><img src="images/projects/turbo_compress.png" alt="Turbo-compress" /></div>
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="https://github.com/your-repo/image-compressor" target="_blank" class="project-link">🐙 GitHub</a>
+              <a href="https://your-demo-link.com/image-compressor" target="_blank" class="project-link">🚀 Live Demo</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Turbo Compress Image</h3>
+            <p class="project-description">Web-based image compressor with modern UI</p>
+            <div class="project-tech">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Canvas API</span>
+              <span class="tech-tag">HTML/CSS</span>
+            </div>
+          </div>
+        </div>
+
+      
+        <!-- Project: Online Compiler -->
+        <div class="project-card glass-card" data-category="fullstack">
+          <div class="project-image"><img src="images/projects/online_compiler.png" alt="online-compiler" /></div>
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="https://github.com/your-repo/online-compiler" target="_blank" class="project-link">🐙 GitHub</a>
+              <a href="https://your-demo-link.com/online-compiler" target="_blank" class="project-link">🚀 Live Demo</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Online Compiler</h3>
+            <p class="project-description">Execute code in-browser using Judge0 API</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Judge0</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+   <!-- About Section -->
+<section class="about" id="about">
+  <div class="container about-wrapper">
+    <!-- Left side: Image + Resume + Core Subjects -->
+    <div class="about-left">
+      <img src="./images/profile2.jpg" alt="Sumit Kumar" class="about-img" />
+
+      
+      <div class="resume-button-left">
+        <a href="./documents/231210105_Sumit.pdf" download class="btn btn--primary">
+          📄 Download Resume
+        </a>
+      </div>
+      <div class="core-subjects">
+        <h3 class="skills-title">📘 Core Subjects</h3>
+        <ul class="coursework-list">
+          <li>📚 Data Structures and Algorithms</li>
+          <li>🗄️ DBMS</li>
+          <li>💻 Operating System</li>
+          <li>🧠 Artificial Intelligence</li>
+          <li>🧮 Computer Architecture</li>
+          <li>🛠️ Software Engineering</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right side: Description + Skills -->
+    <div class="about-right">
+      <h2 class="section-title">About Me</h2>
+      <p class="about-description">
+        I’m <strong>Sumit Kumar</strong>, a Full Stack Developer and engineering student at <strong>NIT Delhi</strong>.
+        Passionate about crafting impactful web applications, I blend front-end elegance with back-end logic. I stay updated with tools like
+        <strong>Prompt Engineering</strong> and AI while building real-world products and scalable solutions.
+      </p>
+
+      <h3 class="skills-title">🧰 Technical Skills</h3>
+      <div class="skills-grid">
+        <div class="skill-item">C</div>
+        <div class="skill-item">C++</div>
+        <div class="skill-item">JavaScript</div>
+        <div class="skill-item">React.js</div>
+        <div class="skill-item">HTML</div>
+        <div class="skill-item">CSS</div>
+        <div class="skill-item">SQL</div>
+        <div class="skill-item">MySQL</div>
+        <div class="skill-item">Git</div>
+        <div class="skill-item">GitHub</div>
+        <div class="skill-item">VS Code</div>
+        <div class="skill-item">AWS</div>
+        <div class="skill-item">Jenkins (CI/CD)</div>
+        <div class="skill-item">Jupyter Notebook</div>
+        <div class="skill-item">XAMPP</div>
+        <div class="skill-item">StarUML</div>
+        <div class="skill-item">MS Excel</div>
+        <div class="skill-item">PowerPoint</div>
+        <div class="skill-item">Generative AI</div>
+        <div class="skill-item">Prompt Engineering</div>
+        <div class="skill-item">Raptor</div>
+      </div>
+
+      <h3 class="skills-title">💡 Soft Skills</h3>
+      <div class="skills-grid soft-skills">
+        <div class="skill-item">Communication</div>
+        <div class="skill-item">Collaboration</div>
+        <div class="skill-item">Problem Solving</div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+  <div class="contact-bg-animation"></div>
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-content">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-details">
+            <h3>Location</h3>
+            <p>New Delhi, India</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div class="contact-details">
+            <h3>Email</h3>
+            <p>sumit.kumar120664@gmail.com</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📱</div>
+          <div class="contact-details">
+            <h3>Phone</h3>
+            <p>+91 999-XXX-7XX</p>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/sumitkr-2" target="_blank" class="social-link">
+            <span class="social-icon">🐙</span>
+            <span class="social-tooltip">GitHub</span>
+          </a>
+          <a href="https://linkedin.com/in/sumit-kumar2004" target="_blank" class="social-link">
+            <span class="social-icon">💼</span>
+            <span class="social-tooltip">LinkedIn</span>
+          </a>
+          <a href="https://twitter.com/collageuse2004" target="_blank" class="social-link">
+            <span class="social-icon">🐦</span>
+            <span class="social-tooltip">Twitter</span>
+          </a>
+          <a href="mailto:sumit.kumar120664@gmail.com" class="social-link">
+            <span class="social-icon">📧</span>
+            <span class="social-tooltip">Email</span>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form glass-card-premium" id="contact-form">
+        <div class="form-header">
+          <h3>Send me a message</h3>
+        
+        </div>
+
+        <div class="form-group">
+          <div class="input-container">
+            <span class="input-icon">👤</span>
+            <input type="text" id="fullName" name="fullName" class="form-control" placeholder=" " required>
+            <label for="fullName" class="form-label">Full Name</label>
+            <div class="input-border"></div>
+          </div>
+          <div class="form-error" id="fullName-error"></div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-container">
+            <span class="input-icon">📧</span>
+            <input type="email" id="email" name="email" class="form-control" placeholder=" " required>
+            <label for="email" class="form-label">Email Address</label>
+            <div class="input-border"></div>
+          </div>
+          <div class="form-error" id="email-error"></div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-container">
+            <span class="input-icon">💬</span>
+            <input type="text" id="subject" name="subject" class="form-control" placeholder=" " required>
+            <label for="subject" class="form-label">Subject</label>
+            <div class="input-border"></div>
+          </div>
+          <div class="form-error" id="subject-error"></div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-container textarea-container">
+            <span class="input-icon textarea-icon">✍️</span>
+            <textarea id="message" name="message" class="form-control" placeholder=" " rows="5" required></textarea>
+            <label for="message" class="form-label">Message</label>
+            <div class="input-border"></div>
+          </div>
+          <div class="form-error" id="message-error"></div>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          <span class="btn-text">Send Message</span>
+          <span class="btn-icon">✨</span>
+          <div class="btn-loader"></div>
+          <div class="btn-gradient"></div>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+     <!-- Footer -->
+   <footer class="contact-footer">
+  <div class="contact-container">
+    <h3>Contact Info</h3>
+
+    <div class="contact-item">
+      <i class="fas fa-phone-alt"></i>
+      <span>+91 999- XXX-7XX</span>
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <span>sumit.kumar120664@gmail.com</span>
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>New Delhi, India - 110034</span>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/sumit-kumar2004" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/sumitkr-2" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:sumit.kumar120664@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://twitter.com/collageuse2004" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://t.me/sumit_kr_2" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+    </div>
+     <p id="copyright">© 2025 Sumit. All rights reserved.</p>
+  </div>
+</footer>
+
+
+ <!-- Bootstrap JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
