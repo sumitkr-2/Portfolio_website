@@ -297,6 +297,12 @@
   --color-info-rgb: var(--color-slate-500-rgb);
 }
 
+
+
+
+
+/* BEGIN DESIGN SYSTEM 2024 */
+
 /* Base styles */
 html {
   font-size: var(--font-size-base);
