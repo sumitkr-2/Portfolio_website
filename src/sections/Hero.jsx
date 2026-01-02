@@ -1,6 +1,8 @@
 // src/sections/Hero.jsx
 
 // ===== IMPORTS =====
+import { motion } from "framer-motion";
+
 import heroImg from "../assets/images/sumit.png";
 
 const Hero = () => {
@@ -21,15 +23,26 @@ const Hero = () => {
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
             Hey there! 👋 <br />
             I&apos;m{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500">
-              Sumit Kumar
-            </span>
+            <motion.span
+  className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500 inline-block"
+  animate={{ x: [-8, 8, -8] }}
+  transition={{
+    duration: 4,
+    ease: "easeInOut",
+    repeat: Infinity,
+  }}
+>
+  Sumit Kumar
+</motion.span>
+
+
           </h1>
 
           {/* Role */}
-          <h2 className="text-lg md:text-xl text-gray-300 mb-6">
-            Full Stack Developer & Problem Solver
-          </h2>
+        <h2 className="hero-role text-lg md:text-xl text-gray-300 mb-6">
+  Full Stack Developer & Problem Solver
+</h2>
+
 
           {/* Description */}
           <p className="max-w-xl text-gray-400 leading-relaxed mb-8">

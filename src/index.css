@@ -61,3 +61,139 @@ section {
 .hide-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
+
+
+/* Custom cursor*/
+
+/* hide default cursor */
+body {
+  cursor: none;
+}
+
+/* inner dot */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: #4efcff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+/* outer ring */
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(78, 252, 255, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-dot,
+.cursor-ring {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Hide default cursor */
+body {
+  cursor: none;
+}
+
+/* Inner dot */
+.cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: #67e8f9;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 9999;
+}
+
+/* Outer ring */
+.cursor-ring {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(103, 232, 249, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+  z-index: 9998;
+  transition: opacity 0.2s ease;
+}
+
+/* Idle pulse */
+.cursor-ring.idle {
+  animation: cursorPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes cursorPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.6;
+  }
+}
+
+
+/* ===== HERO TEXT ANIMATIONS ===== */
+
+/* Floating + subtle glow for name */
+.hero-name {
+  display: inline-block;
+  animation: nameFloat 5s ease-in-out infinite;
+}
+
+@keyframes nameFloat {
+  0% {
+    transform: translateY(0);
+    text-shadow: 0 0 10px rgba(236, 72, 153, 0.3);
+  }
+  50% {
+    transform: translateY(-8px);
+    text-shadow: 0 0 25px rgba(236, 72, 153, 0.6);
+  }
+  100% {
+    transform: translateY(0);
+    text-shadow: 0 0 10px rgba(236, 72, 153, 0.3);
+  }
+}
+
+/* Slow left-right drift for role */
+.hero-role {
+  display: inline-block;
+  animation: roleDrift 6s ease-in-out infinite;
+}
+
+@keyframes roleDrift {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(12px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -3,6 +3,7 @@
 // ===== IMPORT COMPONENTS =====
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Cursor from "./components/Cursor";
 
 // ===== IMPORT SECTIONS =====
 import Hero from "./sections/Hero";
@@ -15,6 +16,7 @@ import Contact from "./sections/Contact";
 function App() {
   return (
     <div className="bg-[#060914] min-h-screen overflow-x-hidden">
+       <Cursor />
       <Navbar />
       <Hero />
       <Education />
