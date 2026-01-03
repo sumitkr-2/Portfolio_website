@@ -16,14 +16,19 @@ import Contact from "./sections/Contact";
 function App() {
   return (
     <div className="bg-[#060914] min-h-screen overflow-x-hidden">
-       <Cursor />
+      <Cursor />
       <Navbar />
-      <Hero />
-      <Education />
-      <Experience />
-      <Projects />
-      <About />
-      <Contact />
+
+      {/* MAIN CONTENT OFFSET FOR FIXED NAVBAR */}
+      <main className="pt-16">
+        <Hero />
+        <Education />
+        <Experience />
+        <Projects />
+        <About />
+        <Contact />
+      </main>
+
       <Footer />
     </div>
   );
