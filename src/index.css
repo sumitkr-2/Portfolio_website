@@ -66,47 +66,10 @@ section {
 /* Custom cursor*/
 
 /* hide default cursor */
-body {
-  cursor: none;
-}
-
-/* inner dot */
-.cursor-dot {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 8px;
-  height: 8px;
-  background: #4efcff;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-}
-
-/* outer ring */
-.cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 36px;
-  height: 36px;
-  border: 2px solid rgba(78, 252, 255, 0.6);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%, -50%);
-}
-
-.cursor-dot,
-.cursor-ring {
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-/* Hide default cursor */
-body {
-  cursor: none;
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
 }
 
 /* Inner dot */
@@ -120,6 +83,13 @@ body {
   transform: translate(-50%, -50%);
   opacity: 0;
   z-index: 9999;
+  display: none;
+}
+
+@media (pointer: fine) {
+  .cursor-dot {
+    display: block;
+  }
 }
 
 /* Outer ring */
@@ -134,6 +104,13 @@ body {
   opacity: 0;
   z-index: 9998;
   transition: opacity 0.2s ease;
+  display: none;
+}
+
+@media (pointer: fine) {
+  .cursor-ring {
+    display: block;
+  }
 }
 
 /* Idle pulse */

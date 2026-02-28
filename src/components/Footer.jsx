@@ -10,12 +10,12 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0b0b0b] text-white py-8 text-center font-['Segoe_UI']">
+    <footer className="bg-[#0b0b0b] text-white py-6 md:py-8 text-center font-['Segoe_UI']">
 
       {/* Title */}
       <h3
         className="
-          text-2xl md:text-3xl mb-5
+          text-xl md:text-2xl md:text-3xl mb-4 md:mb-5
           text-white
           drop-shadow-[0_0_10px_orange]
         "
@@ -24,12 +24,12 @@ const Footer = () => {
       </h3>
 
       {/* Contact items */}
-      <div className="space-y-3 text-sm md:text-base">
+      <div className="space-y-2 md:space-y-3 text-xs md:text-sm">
 
         {/* Phone */}
         <div
           className="
-            group flex justify-center items-center gap-3
+            group flex justify-center items-center gap-2 md:gap-3
             transition-all duration-300
             hover:text-orange-400
             hover:drop-shadow-[0_0_10px_orange]
@@ -45,7 +45,7 @@ const Footer = () => {
         {/* Email */}
         <div
           className="
-            group flex justify-center items-center gap-3
+            group flex justify-center items-center gap-2 md:gap-3
             transition-all duration-300
             hover:text-orange-400
             hover:drop-shadow-[0_0_10px_orange]
@@ -61,7 +61,7 @@ const Footer = () => {
         {/* Location */}
         <div
           className="
-            group flex justify-center items-center gap-3
+            group flex justify-center items-center gap-2 md:gap-3
             transition-all duration-300
             hover:text-orange-400
             hover:drop-shadow-[0_0_10px_orange]
@@ -77,7 +77,7 @@ const Footer = () => {
       </div>
 
       {/* Social Icons */}
-      <div className="flex justify-center gap-4 mt-6 flex-wrap">
+      <div className="flex justify-center gap-3 md:gap-4 mt-5 md:mt-6 flex-wrap">
         {[
           { icon: <FaLinkedinIn />, link: "https://www.linkedin.com/in/sumit-kumar2004" },
           { icon: <FaGithub />, link: "https://github.com/sumitkr-2" },
@@ -91,16 +91,16 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
             className="
-              w-[42px] h-[42px]
+              w-[36px] h-[36px] md:w-[42px] md:h-[42px]
               flex items-center justify-center
               rounded-full
               border-2 border-orange-400
-              text-orange-400 text-lg
+              text-orange-400 text-base md:text-lg
               shadow-[0_0_10px_rgba(255,165,0,0.6)]
               transition-all duration-300
-              hover:bg-orange-400 hover:text-black
-              hover:shadow-[0_0_15px_orange,0_0_25px_orange]
-              hover:-translate-y-[2px]
+              md:hover:bg-orange-400 md:hover:text-black
+              md:hover:shadow-[0_0_15px_orange,0_0_25px_orange]
+              md:hover:-translate-y-[2px]
             "
           >
             {item.icon}
@@ -109,7 +109,7 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <p className="mt-5 text-sm text-white/80">
+      <p className="mt-4 md:mt-5 text-xs md:text-sm text-white/80">
         © 2025 Sumit. All rights reserved.
       </p>
 

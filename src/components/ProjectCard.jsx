@@ -16,7 +16,7 @@ const ProjectCard = ({ project }) => {
           opacity-40
           -z-20
           transition-all duration-300
-          group-hover:translate-y-5
+          md:group-hover:translate-y-5
         "
       />
 
@@ -30,7 +30,7 @@ const ProjectCard = ({ project }) => {
           opacity-60
           -z-10
           transition-all duration-300
-          group-hover:translate-y-3
+          md:group-hover:translate-y-3
         "
       />
 
@@ -41,8 +41,8 @@ const ProjectCard = ({ project }) => {
           rounded-xl overflow-hidden
           bg-white/5 border border-white/10
           transition-all duration-300
-          hover:-translate-y-2
-          hover:shadow-[0_25px_60px_rgba(34,211,238,0.25)]
+          md:hover:-translate-y-2
+          md:hover:shadow-[0_25px_60px_rgba(34,211,238,0.25)]
         "
       >
         {/* Image */}
@@ -51,20 +51,20 @@ const ProjectCard = ({ project }) => {
             src={image}
             alt={title}
             className="
-              h-40 w-full object-cover
+              h-36 md:h-40 w-full object-cover
               transition-transform duration-500
-              group-hover:scale-110
+              md:group-hover:scale-110
             "
           />
         </div>
 
         {/* Content */}
         <div className="p-4">
-          <h3 className="text-cyan-300 font-semibold text-base">
+          <h3 className="text-cyan-300 font-semibold text-sm md:text-base">
             {title}
           </h3>
 
-          <p className="text-sm text-gray-400 mt-1">
+          <p className="text-xs md:text-sm text-gray-400 mt-1">
             {description}
           </p>
 
@@ -73,7 +73,7 @@ const ProjectCard = ({ project }) => {
               <span
                 key={i}
                 className="
-                  px-2 py-0.5 text-[11px]
+                  px-2 py-0.5 text-[10px] md:text-[11px]
                   border border-cyan-400/40
                   rounded-full text-cyan-300
                 "
@@ -89,9 +89,9 @@ const ProjectCard = ({ project }) => {
           className="
             absolute inset-0
             bg-black/70
-            opacity-0 group-hover:opacity-100
+            opacity-0 md:group-hover:opacity-100
             transition-opacity duration-300
-            flex items-center justify-center gap-4
+            flex items-center justify-center gap-3 md:gap-4
           "
         >
           {github && (
@@ -101,9 +101,9 @@ const ProjectCard = ({ project }) => {
               rel="noreferrer"
               className="
                 flex items-center gap-2
-                px-4 py-2 rounded-full
-                bg-cyan-400 text-black text-sm font-semibold
-                hover:scale-105 transition
+                px-3 md:px-4 py-1.5 md:py-2 rounded-full
+                bg-cyan-400 text-black text-xs md:text-sm font-semibold
+                md:hover:scale-105 transition
               "
             >
               <FaGithub /> GitHub
@@ -117,9 +117,9 @@ const ProjectCard = ({ project }) => {
               rel="noreferrer"
               className="
                 flex items-center gap-2
-                px-4 py-2 rounded-full
-                bg-violet-400 text-black text-sm font-semibold
-                hover:scale-105 transition
+                px-3 md:px-4 py-1.5 md:py-2 rounded-full
+                bg-violet-400 text-black text-xs md:text-sm font-semibold
+                md:hover:scale-105 transition
               "
             >
               <FaExternalLinkAlt /> Live

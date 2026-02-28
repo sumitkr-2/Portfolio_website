@@ -24,9 +24,9 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="relative py-24 bg-gradient-to-b from-[#0b1024] to-[#060914]"
+      className="relative py-16 md:py-24 bg-gradient-to-b from-[#0b1024] to-[#060914]"
     >
-      <h2 className="text-center text-violet-400 text-4xl mb-14">
+      <h2 className="text-center text-violet-400 text-3xl md:text-4xl mb-10 md:mb-14">
         Experience
       </h2>
 
@@ -35,12 +35,12 @@ const Experience = () => {
         onClick={scrollLeft}
         className="
           hidden md:flex
-          absolute left-6 top-1/2 -translate-y-1/2 z-20
-          w-12 h-12 rounded-full
+          absolute left-4 md:left-6 top-1/2 -translate-y-1/2 z-20
+          w-10 h-10 md:w-12 md:h-12 rounded-full
           bg-black/60 border border-white/10
-          text-cyan-400 text-xl
+          text-cyan-400 text-lg md:text-xl
           items-center justify-center
-          hover:bg-cyan-400 hover:text-black
+          md:hover:bg-cyan-400 md:hover:text-black
           transition
         "
       >
@@ -51,12 +51,12 @@ const Experience = () => {
         onClick={scrollRight}
         className="
           hidden md:flex
-          absolute right-6 top-1/2 -translate-y-1/2 z-20
-          w-12 h-12 rounded-full
+          absolute right-4 md:right-6 top-1/2 -translate-y-1/2 z-20
+          w-10 h-10 md:w-12 md:h-12 rounded-full
           bg-black/60 border border-white/10
-          text-cyan-400 text-xl
+          text-cyan-400 text-lg md:text-xl
           items-center justify-center
-          hover:bg-cyan-400 hover:text-black
+          md:hover:bg-cyan-400 md:hover:text-black
           transition
         "
       >
@@ -69,17 +69,18 @@ const Experience = () => {
         <div
           ref={scrollRef}
           className="
-            flex gap-8
+            flex gap-6 md:gap-8
             overflow-x-auto
             scroll-smooth
             snap-x snap-mandatory
             hide-scrollbar
+            px-2 md:px-0
           "
         >
           {experiences.map((exp, i) => (
             <div key={i} className="snap-center shrink-0">
               {/* CARD */}
-              <div className="group w-[260px] h-[410px] perspective">
+              <div className="group w-[220px] md:w-[260px] h-[360px] md:h-[410px] perspective">
                 <div
                   className="
                     relative w-full h-full
