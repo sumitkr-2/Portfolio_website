@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { experiences } from "../data/experiences";
 
 const CARD_WIDTH = 260;
@@ -6,6 +6,7 @@ const GAP = 32;
 
 const Experience = () => {
   const scrollRef = useRef(null);
+  const [activeCard, setActiveCard] = useState(null);
 
   const scrollLeft = () => {
     scrollRef.current.scrollBy({
@@ -30,7 +31,7 @@ const Experience = () => {
         Experience
       </h2>
 
-      {/* Arrows (desktop only) */}
+      {/* Left Arrow */}
       <button
         onClick={scrollLeft}
         className="
@@ -47,6 +48,7 @@ const Experience = () => {
         ←
       </button>
 
+      {/* Right Arrow */}
       <button
         onClick={scrollRight}
         className="
@@ -63,32 +65,41 @@ const Experience = () => {
         →
       </button>
 
-      {/* Wrapper that fits EXACTLY 4 cards */}
+      {/* Wrapper */}
       <div className="mx-auto max-w-[1184px] px-4">
         {/* Scroll container */}
         <div
           ref={scrollRef}
+          style={{ WebkitOverflowScrolling: "touch" }}
           className="
             flex gap-6 md:gap-8
             overflow-x-auto
+            overflow-y-hidden
             scroll-smooth
             snap-x snap-mandatory
             hide-scrollbar
             px-2 md:px-0
+            overscroll-x-contain
           "
         >
           {experiences.map((exp, i) => (
             <div key={i} className="snap-center shrink-0">
               {/* CARD */}
-              <div className="group w-[220px] md:w-[260px] h-[360px] md:h-[410px] perspective">
+              <div
+                className="group w-[220px] md:w-[260px] h-[360px] md:h-[410px] perspective"
+                onClick={() =>
+                  setActiveCard(activeCard === i ? null : i)
+                }
+              >
                 <div
-                  className="
+                  className={`
                     relative w-full h-full
                     transition-transform duration-700 ease-in-out
                     transform-style-preserve-3d
                     will-change-transform
                     group-hover:rotate-y-180
-                  "
+                    ${activeCard === i ? "rotate-y-180" : ""}
+                  `}
                 >
                   {/* FRONT */}
                   <div
@@ -104,7 +115,6 @@ const Experience = () => {
                       transition-shadow
                     "
                   >
-                    {/* Circular image */}
                     <div className="w-24 h-24 rounded-full overflow-hidden border border-cyan-400/30 shadow-[0_0_25px_rgba(34,211,238,0.3)]">
                       <img
                         src={exp.img}
